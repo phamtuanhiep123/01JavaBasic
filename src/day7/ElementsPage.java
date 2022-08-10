@@ -14,4 +14,9 @@ public TextBoxPage clickonTextBox () {
 
 	return new TextBoxPage (driver);
 }
+public CheckBoxPage clickonCheckBox () {
+	driver.findElement(By.xpath("//span[text()='Check Box']")).click();
+
+	return new CheckBoxPage (driver);
+}
 }

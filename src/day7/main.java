@@ -11,8 +11,9 @@ public class main {
 //		TestBase testBase = new TestBase();
 //
 //		submitSuccesfully();
-		validateEmail();
-
+//		validateEmail();
+//       checkBoxVerify();		
+       multiCheckBoxVerify ();
 	}
 // TCs 1
 	public static void submitSuccesfully() {
@@ -54,7 +55,27 @@ public class main {
 		
 	}
 	//TCs 3
-	public static void checkboxVerify () {
-		
+	public static void checkBoxVerify () {
+
+		TestBase testBase = new TestBase();
+		testBase.openWebBrower();
+		HomePage homePage = new HomePage(testBase.driver);
+		homePage.scroll();
+		ElementsPage elementsPage = homePage.clickonElements();
+		CheckBoxPage checkBoxPage = elementsPage.clickonCheckBox();
+		boolean verify1 = checkBoxPage.verifyCheckbox();
+		boolean clickCheckBox = checkBoxPage.clickCheckbox();
+
+	}
+	//TCs 4
+	public static void multiCheckBoxVerify () {
+
+		TestBase testBase = new TestBase();
+		testBase.openWebBrower();
+		HomePage homePage = new HomePage(testBase.driver);
+		homePage.scroll();
+		ElementsPage elementsPage = homePage.clickonElements();
+		CheckBoxPage checkBoxPage = elementsPage.clickonCheckBox();
+		boolean clickCheckBox = checkBoxPage.clickCheckbox();
 	}
 }
