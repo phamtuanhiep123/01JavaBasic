@@ -14,7 +14,7 @@ public class CheckBoxPage extends Page {
 		boolean isSelected = driver.findElement(By.xpath(
 				"//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/ol[1]/li[1]/span[1]/label[1]/span[1]/*[1]"))
 				.isSelected();
-		if (isSelected == false) {
+		if (!isSelected) {
 			System.out.println("TCs Pass");
 		} else {
 			System.out.println("TCs False");
@@ -62,6 +62,14 @@ public class CheckBoxPage extends Page {
 			
    } 
 		
+		if (deskTop && documents && download) {
+			return true;
+		}
+		return false;
+
+   }
+   public void getText () {
+		String css = driver.findElement(By.id("result")).getText();
 
    }
 }

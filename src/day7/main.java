@@ -76,6 +76,11 @@ public class main {
 		homePage.scroll();
 		ElementsPage elementsPage = homePage.clickonElements();
 		CheckBoxPage checkBoxPage = elementsPage.clickonCheckBox();
+		boolean verify1 = checkBoxPage.verifyCheckbox();
+
 		boolean clickCheckBox = checkBoxPage.clickCheckbox();
+		boolean isVerifyMultipleCheckbox = checkBoxPage.verifyMultiCheckbox();
+		
+		
 	}
 }
